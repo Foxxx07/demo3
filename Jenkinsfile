@@ -19,7 +19,9 @@ pipeline {
 		}
 		
 		stage('Jenkins'){
-			bat 'mvn tomcat:deploy'
+			steps{
+				bat 'mvn tomcat:deploy'
+			}
 		
 		}
 	}
